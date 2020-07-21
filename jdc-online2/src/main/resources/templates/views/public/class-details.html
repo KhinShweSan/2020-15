@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/public}">
+<head>
+<meta charset="UTF-8">
+<title>Class</title>
+</head>
+<body>
+
+	<div layout:fragment="title">Java Basic Course</div>
+
+	<div layout:fragment="content">
+	
+		<!-- Cover Image -->
+		<div class="ui stacked segment">
+			<img class="ui fluid image" th:src="@{/resources/images/class-details-cover.png}" />
+		</div>
+		
+		<!-- Other Informations -->
+		<div id="classTab" class="ui pointing teal inverted menu">
+			<span data-tab="class" class="item active">Class Information</span>
+			
+			<span data-tab="teacher" class="item">Teacher Information</span>
+			<span data-tab="registration" class="item">Registration</span>
+		</div>
+		
+		<div class="ui tab active" data-tab="class">
+			<div class="ui segment">
+			
+			<div class="ui grid">
+				<div class="four wide column">
+					<div class="ui fluid image">
+					<img th:src="@{/resources/images/course.png}" alt="" />
+					</div>
+				</div>
+			<div class="twelve wide column">
+				<!-- Class Title -->
+				<h3>July Intake Java Basic Class</h3>
+				<div class="ui list">
+					<!-- Level -->
+					<div class="item">
+						<i class="book icon"></i>
+						<div class="content ">Book</div>
+					</div>
+					<!-- Start Date -->
+					<div class="item">
+						<i class="calendar icon"></i>
+						<div class="content">2020/08/01</div>
+					</div>
+					
+				
+					<!-- Days -->
+					<div class="item">
+						<i class="calendar icon"></i>
+						<div class="content">MON-FRI</div>
+					</div>
+					
+					<!-- Times -->
+					<div class="item">
+						<i class="clock icon"></i>
+						<div class="content">18:00- 20:00</div>
+					</div>
+					<!-- Duration -->
+					<div class="item">
+						<i class="clock icon"></i>
+						<div class="content">3 Months</div>
+					
+					</div>
+					<!-- Fees -->
+					<div class="item">
+						<i class="usd icon"></i>
+						<div class="content">180,000 MMK</div>
+					</div>
+					<!-- Requrament -->
+					<div class="item">
+						<i class="hand point right outline icon"></i>
+						<div class="content">Computer Basic Concept</div>
+					</div>	
+				
+				</div>
+				<!-- Course Information -->
+				<h3>Course Outline</h3>
+				<p>a;fdkj afjd ;flkdj ;aflkdjfa ;dlfkj a;dlkfj ;adlkfj ;adlkfj d;lkafj d;lkfa j;dlfk jd;lafkjd;lafk jd;lfkjd;lafk j;adlkf j;dlk fj;dlk fj;ldakf j;dlk fd;lkf jd;lkf jd;lkf dlk fkdla fj;dlk fjd;lk fd;lk f;ldk fdk f;dl kj</p>
+				
+		
+				<div class="ui list">
+				<div class="item">
+					<i class="location arrow icon"></i>
+					<div class="content">
+						<div class="header">Language Fundamentals</div>
+						<div class="description">Collection are heterogeneous</div>
+					</div>
+				</div>
+				<div class="item">
+					<i class="location arrow icon"></i>
+					<div class="content">
+						<div class="header">Language Fundamentals</div>
+						<div class="description">Collection are heterogeneous</div>
+					</div>
+				</div>
+				<div class="item">
+					<i class="location arrow icon"></i>
+					<div class="content">
+						<div class="header">Language Fundamentals</div>
+						<div class="description">Collection are heterogeneous</div>
+					</div>
+				</div>
+				<div class="item">
+					<i class="location arrow icon"></i>
+					<div class="content">
+						<div class="header">Language Fundamentals</div>
+						<div class="description">Collection are heterogeneous</div>
+					</div>
+				</div>
+				<div class="item">
+					<i class="location arrow icon"></i>
+					<div class="content">
+						<div class="header">Language Fundamentals</div>
+						<div class="description">Collection are heterogeneous</div>
+					</div>
+				</div>
+				
+				</div>
+				
+			</div>
+				
+				</div>
+			</div>
+		</div>
+
+		
+
+		<div class="ui tab" data-tab="teacher">
+			<div class="ui segment">
+				<div class="ui grid">
+					<div class="four wide column">
+						<div class="ui fluid circular image">
+							<img th:src="@{/resources/images/user-image.jpg}" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui tab" data-tab="registration">
+			<div class="ui segment">
+				<h3>Registration Info</h3>
+			</div>
+		</div>
+		
+		<script>
+			$(() => {
+				$('#classTab .item').tab()
+			})
+		</script>
+	</div>
+	
+</body>
+</html>

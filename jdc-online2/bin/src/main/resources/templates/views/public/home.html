@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/layout/public}">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+
+	<span layout:fragment="title"></span>
+
+	<div layout:fragment="cover-image">
+		<div class="ui raised image segment">
+			<img class="ui rounded fluid image " alt=""
+				th:src="@{/resources/images/cover.png}">
+		</div>
+
+		<div class="ui hidden divider"></div>
+	</div>
+
+	<div layout:fragment="content">
+		<h3>You can apply!</h3>
+
+		<!-- Classes that can be apply new students show as grid -->
+		<div class="ui three column grid">
+
+			<div class="column" th:each="item : ${classes}">
+
+				<a th:href="@{/public/{id}(id=${item.id})}" class="ui fluid link card">
+					<span class="image">
+						<img th:src="@{/resources/images/course.png}" />
+					</span>
+					<span class="content">
+						<span class="header">Course Name</span>
+						<span class="meta">180,000 MMK</span>
+					</span>
+					<span class="extra content">
+						<span><i class="user icon"></i> 25 Students</span>
+						<span class="right floated">
+							<i class="calendar icon"></i> Start 2020/08/01
+						</span>
+					</span>
+				</a>
+			</div>
+
+
+		</div>
+
+	</div>
+
+</body>
+</html>
